@@ -1,0 +1,1 @@
+<img src="/gorilla.jpg" alt="GotYou!" class="pic">
