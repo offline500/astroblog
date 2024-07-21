@@ -47,7 +47,6 @@
   display: none;
 }
 
-/* Media Queries für responsives Design */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -69,5 +68,9 @@
     display: block;
     width: 100%;
     text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
   }
 }
