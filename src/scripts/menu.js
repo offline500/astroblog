@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
     menuIcon.addEventListener('click', () => {
       menu.classList.toggle('active');
+      menuIcon.classList.toggle('active');
     });
   
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         menu.classList.add('active');
+        menuIcon.classList.remove('active');
       } else {
         menu.classList.remove('active');
       }

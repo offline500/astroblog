@@ -25,6 +25,7 @@
   margin: 0;
   display: flex;
   align-items: center;
+  transition: max-height 0.3s ease;
 }
 
 .menu li {
@@ -57,6 +58,13 @@
     top: 60px;
     left: 0;
     z-index: 999;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .menu.active {
+    display: flex;
+    max-height: 500px; /* or any suitable value */
   }
 
   .menu li {
@@ -68,9 +76,5 @@
     display: block;
     width: 100%;
     text-align: center;
-  }
-
-  .menu.active {
-    display: flex;
   }
 }
