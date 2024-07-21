@@ -1,5 +1,6 @@
 ---
 import '../styles/nav.css';
+import Hamburger from './Hamburger.astro';
 ---
 
 <nav class="navbar">
@@ -7,9 +8,7 @@ import '../styles/nav.css';
     <a href="/">😊</a>
   </div>
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">
-    <span class="navicon"></span>
-  </label>
+  <Hamburger />
   <ul class="menu">
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
