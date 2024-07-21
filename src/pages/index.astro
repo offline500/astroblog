@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/footer.astro';
-
+import Nav from '../components/Nav.astro';
 
 const pageTitle = "Home";
 ---
@@ -15,11 +15,7 @@ const pageTitle = "Home";
   <link rel="stylesheet" href="src/styles/global.css">
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-  </nav>
+	<Nav />
   <div class="container">
     <h1>Billie Jean</h1>
     <p>She was more like a beauty queen from a movie scene<br>

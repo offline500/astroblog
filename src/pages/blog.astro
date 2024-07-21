@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/footer.astro';
+import Nav from '../components/Nav.astro';
+
 const pageTitle = "Blog";
 ---
 
@@ -44,11 +46,7 @@ const pageTitle = "Blog";
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-  </nav>
+  <Nav />
   <div class="container">
     <h1>1. Push-Pull Training</h1>
     <table>
