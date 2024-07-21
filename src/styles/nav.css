@@ -1,4 +1,4 @@
-
+/* Basisstile für die Navigation */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -42,7 +42,7 @@
   color: #ff4081;
 }
 
-
+/* Hamburger-Menü-Symbol für mobile Ansicht */
 .menu-toggle {
   display: none;
 }
@@ -62,7 +62,7 @@
   margin: 4px 0;
 }
 
-
+/* Media Queries für responsives Design */
 @media (max-width: 768px) {
   .menu {
     display: none;
