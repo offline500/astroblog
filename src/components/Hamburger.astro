@@ -1,7 +1,45 @@
 ---
 ---
+
 <div class="hamburger">
     <span class="line"></span>
     <span class="line"></span>
     <span class="line"></span>
-  </div>
+</div>
+
+<style>
+.hamburger {
+  display: none; /* Standardmäßig ausgeblendet */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Zeigen Sie das Menü-Icon nur auf mobilen Geräten an */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+</style>

@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.querySelector('.menu-icon');
-    const overlayMenu = document.querySelector('.overlay-menu');
-  
+    const menuIcon = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
     menuIcon.addEventListener('click', () => {
-      menuIcon.classList.toggle('active');
-      overlayMenu.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+        menu.classList.toggle('active');
     });
-  
+
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        menuIcon.classList.remove('active');
-        overlayMenu.classList.remove('active');
-      }
+        if (window.innerWidth > 768) {
+            menuIcon.classList.remove('active');
+            menu.classList.remove('active');
+        }
     });
-  });
+});
