@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-title: 'Blog'
+import Footer from '../components/footer.astro';
+const pageTitle = "Blog";
 ---
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ title: 'Blog'
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bl0g</title>
+  <title>{pageTitle}</title>
   <link rel="stylesheet" href="/src/styles/global.css">
   <style>
     table {
@@ -108,8 +109,6 @@ title: 'Blog'
         </ul>
     </div>
 </div>
-  <footer>
-    <p>&copy; Offline. All Rights Reserved.</p>
-  </footer>
+<Footer />
 </body>
 </html>

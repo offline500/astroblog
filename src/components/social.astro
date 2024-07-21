@@ -1,0 +1,40 @@
+---
+const { platform, username } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <a href={`https://www.${platform}.com/${username}`} target="_blank" rel="noopener noreferrer">
+    <i class={`fab fa-${platform.toLowerCase()}`}></i> {platform}
+  </a>
+
+  <style>
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: white;
+      background-color: #4c1d95;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #6b21a8;
+    }
+
+    a i {
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+    }
+  </style>
+</body>
+</html>

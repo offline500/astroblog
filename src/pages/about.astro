@@ -1,31 +1,76 @@
 ---
 import '../styles/global.css';
-title: 'About Me'
+import Footer from '../components/footer.astro';
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "offline",
+  country: "Germany",
+  occupation: "programer and pro gamer",
+  hobbies: ["programming", "birdwatching", "ufc"],
+};
+  const skills = ["HTML", "CSS", "JavaScript", "Astro", "Java"];
+
+  const skillColor = "green";
+  const fontWeight = "bold";
+  const textCase = "uppercase";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <title>{pageTitle}</title>
   <link rel="stylesheet" href="/src/styles/global.css">
 </head>
+
 <body>
+  
   <nav>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
   </nav>
+  
   <div class="container">
-    <h1>About Me</h1>
-    <img src="/mypic.png" alt="This is me!" class="profile-pic">
+    <h1>{pageTitle}</h1>
+    
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
+    
+    <img src="/gorilla2.jpg" alt="This is me!" class="profile-pic">
     <p>Hey! I'm "offline", a passionate programmer and web developer who loves to write shitty code. I started this blog to share my thoughts, experiences, and knowledge with you.</p>
     <p>Thank you for visiting my blog! Feel free to reach out to me through GitHub.</p>
     <p>And by the way, I'm not actually the one in the picture.</p>
+    <p>------------------------------------------------------------------------------------------</p>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      
+      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+      {identity.hobbies.length >= 2 &&
+      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
   </div>
-  <footer>
-    <p>&copy; Offline. All Rights Reserved.</p>
-  </footer>
+ 
+  <Footer />
+
 </body>
+
 </html>
