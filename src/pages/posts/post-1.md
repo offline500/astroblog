@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Becoming an Astro Developer: Key Steps to Get Started'
 pubDate: 2024-07-21
 description: 'Astro'
