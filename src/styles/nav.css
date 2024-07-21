@@ -1,4 +1,4 @@
-/* Basisstile für die Navigation */
+/* BNavbar */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -43,7 +43,7 @@
   color: #ff4081;
 }
 
-/* Hamburger-Menü-Symbol für mobile Ansicht */
+/* toggle */
 .menu-toggle {
   display: none;
 }
@@ -64,7 +64,7 @@
 
   .menu.active {
     display: flex;
-    max-height: 500px; /* or any suitable value */
+    max-height: 500px;
   }
 
   .menu li {
