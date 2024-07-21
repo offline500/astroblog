@@ -3,9 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu');
     const menuIcon = document.querySelector('.menu-icon');
   
-    menuIcon.addEventListener('click', () => {
+    const toggleMenu = () => {
       menu.classList.toggle('active');
       menuIcon.classList.toggle('active');
+    };
+  
+    menuIcon.addEventListener('click', () => {
+      toggleMenu();
     });
   
     window.addEventListener('resize', () => {
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIcon.classList.remove('active');
       } else {
         menu.classList.remove('active');
+        menuToggle.checked = false;
       }
     });
   
